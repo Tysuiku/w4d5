@@ -12,4 +12,29 @@
 # end
 
 def first_anagram?(str1, str2)
+
+    word_1 = ana_counter(str1)
+    word_2 = ana_counter(str2)
+
+    word_1 == word_2
+
+
+    
 end
+
+
+def ana_counter(str1)
+
+    hash = {}
+    str1.each_char do |char|
+        if hash[char] 
+            hash[char] += 1
+        else
+            hash[char] = 1
+        end
+    end
+    hash
+end
+
+p first_anagram?("gizmo", "sally")    #=> false
+p first_anagram?("elvis", "lives")    #=> true
