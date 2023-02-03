@@ -8,8 +8,8 @@ def my_min(arr)
   num
 end
 
-list = [0, 3, 5, 4, -5, 10, 1, 90]
-p my_min(list)
+# list = [0, 3, 5, 4, -5, 10, 1, 90]
+# p my_min(list)
 
 def my_min_v2(arr)
   min_num = arr[0]
@@ -18,4 +18,4 @@ def my_min_v2(arr)
 end
 
 # list = [0, 3, 5, 4, -5, 10, 1, 90]
-# p my_min_v2(list)  # =>  -5
+# p my_min_v2(list)
