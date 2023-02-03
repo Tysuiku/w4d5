@@ -11,6 +11,7 @@
 #   final_arr.select { |x| x == x.reverse }
 # end
 
+#O(n)
 def first_anagram?(str1, str2)
   word_1 = ana_counter(str1)
   word_2 = ana_counter(str2)
@@ -30,5 +31,14 @@ def ana_counter(str1)
   hash
 end
 
-p first_anagram?("gizmo", "sally")    #=> false
-p first_anagram?("elvis", "lives")    #=> true
+# p first_anagram?("gizmo", "sally")    #=> false
+# p first_anagram?("elvis", "lives")    #=> true
+
+def second_anagram?(str1, str2)
+   return false if str1.length != str2.length
+   str1.each_char do |char|
+    if str2.split("").find_index(char) 
+end
+
+#p second_anagram?("gizmo", "sally")    #=> false
+#p second_anagram?("elvis", "lives")    #=> true

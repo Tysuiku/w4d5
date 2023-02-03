@@ -44,10 +44,18 @@ end
 # p largest_contiguous_subsum(list)
 
 def largest_contiguous_subsum_2(arr)
-
-  # largest_sum =
-  # current_sum =
+  largest_sum = arr[0]
+  current_sum = 0
+  arr.each do |i|
+    current_sum += i
+    if current_sum > largest_sum
+      largest_sum = i
+    elsif current_sum < 0
+      current_sum = 0
+    end
+  end
+  largest_sum
 end
 
-# list = [5, 3, -7]
-# p largest_contiguous_subsum(list)
+list = [5, 3, -7]
+p largest_contiguous_subsum_2(list)
